@@ -68,9 +68,7 @@ def generate(pdt):
 			t+=k['t']*20
 		ol+=[f"scoreboard players set @e[type=armor_stand,tag=_bl_{_bl_id},scores={{_path_{pd[p]}={int(t)}..}}] _path_{pd[p]} -1"]
 	for bt in pdt["blocks"].keys():
-		bt_id=_rand_id()
 		for b in pdt["blocks"][bt]:
-			tl=[p["trigger"] for p in b["paths"]]
 			for p in b["paths"]:
 				if (p["trigger"] not in td.keys()):
 					td[p["trigger"]]=_rand_id()
